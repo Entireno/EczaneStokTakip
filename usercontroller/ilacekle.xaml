@@ -1,0 +1,36 @@
+﻿<UserControl x:Class="IlacStok.usercontroller.ilacekle"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:IlacStok.usercontroller"
+             mc:Ignorable="d" 
+             d:DesignHeight="300" d:DesignWidth="300">
+    <Grid>
+        <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
+            <DockPanel Margin="0,0,0,10">
+                <Label x:Name="lbl_barkod" Content="Barkod :" Style="{DynamicResource lbl}"/>
+                <TextBox x:Name="txt_barkod"  Style="{DynamicResource txt}" KeyDown="txt_barkod_KeyDown"  />
+            </DockPanel>
+            <DockPanel Margin="0,0,0,10">
+                <Label x:Name="lbl_ilac" Content="İlac :"  Style="{DynamicResource lbl}" />
+                <TextBox x:Name="txt_ilac" Style="{DynamicResource txt}" />
+            </DockPanel>
+            <DockPanel Margin="0,0,0,10">
+                <Label x:Name="lbl_firma" Content="Firma :"  Style="{DynamicResource lbl}"/>
+                <TextBox x:Name="txt_firma" Style="{DynamicResource txt}"/>
+            </DockPanel>
+            <DockPanel Margin="0,0,0,10">
+                <Label x:Name="lbl_fiyat" Content="Fiyat :" Style="{DynamicResource lbl}" />
+                <TextBox x:Name="txt_fiyat" Style="{DynamicResource txt}" KeyDown="txt_fiyat_KeyDown"/>
+            </DockPanel>
+            <DockPanel Margin="0,0,0,10">
+                <Label x:Name="lbl_adet" Content="Adet :"  Style="{DynamicResource lbl}" />
+                <TextBox x:Name="txt_adet" Style="{DynamicResource txt}" KeyDown="txt_adet_KeyDown"/>
+            </DockPanel>
+
+            <Button Margin="100,0,0,0"  x:Name="ekle" Content="Ekle"    Style="{DynamicResource sorgu}" Click="ekle_Click"  />
+            <Label x:Name="lbl_message"  FontSize="12" FontFamily="Arial" Style="{DynamicResource lbl}" Height="60" Width="293" />
+        </StackPanel>
+    </Grid>
+</UserControl>

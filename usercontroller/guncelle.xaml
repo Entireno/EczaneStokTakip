@@ -1,0 +1,50 @@
+﻿<UserControl x:Class="IlacStok.usercontroller.guncelle"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:IlacStok.usercontroller"
+             mc:Ignorable="d" 
+             d:DesignHeight="300" d:DesignWidth="300" Loaded="UserControl_Loaded">
+    <Grid>
+        <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
+            <DockPanel>
+                <Label Content="İlac :" Style="{DynamicResource lbl}"></Label>
+                <ComboBox x:Name="cmb_ilac" Width="150" Height="25" SelectionChanged="cmb_ilac_SelectionChanged">
+                    
+                </ComboBox>
+                
+            </DockPanel>
+            <DockPanel>
+                <Label Content="Adet :" Style="{DynamicResource lbl}"></Label>
+                <TextBox  x:Name="txt_adet" Style="{DynamicResource txt}" KeyDown="txt_adet_KeyDown"></TextBox>
+
+            </DockPanel>
+            <DockPanel>
+                <Label Content="Firma :" Style="{DynamicResource lbl}"></Label>
+                <TextBox x:Name="txt_firma" Style="{DynamicResource txt}"></TextBox>
+
+            </DockPanel>
+            <DockPanel>
+                <Label Content="Barkod :" Style="{DynamicResource lbl}"></Label>
+                <TextBox x:Name="txt_barkod" Style="{DynamicResource txt}" KeyDown="txt_barkod_KeyDown"></TextBox>
+
+            </DockPanel>
+            <DockPanel>
+                <Label Content="Fiyat :" Style="{DynamicResource lbl}"></Label>
+                <TextBox x:Name="txt_fiyat" Style="{DynamicResource txt}" KeyDown="txt_fiyat_KeyDown"></TextBox>
+
+            </DockPanel>
+            <DockPanel>
+                <Label Content="İlac İsmi :"  Style="{DynamicResource lbl}"></Label>
+                <TextBox x:Name="txt_ilac" Style="{DynamicResource txt}"></TextBox>
+
+            </DockPanel>
+            <DockPanel HorizontalAlignment="Right">
+                <Button x:Name="btn_guncelle" Content="Güncelle" Width="91" Style="{DynamicResource sorgu}" Click="btn_guncelle_Click"></Button>
+                <Button x:Name="btn_sil" Content="Sil" Width="50" Style="{DynamicResource sorgu}" Click="btn_sil_Click"> </Button>
+            </DockPanel>
+            <Label Margin="50,0,0,0" x:Name="lbl_message" Style="{DynamicResource lbl}" Height="52" Width="238"/>
+        </StackPanel>
+    </Grid>
+</UserControl>
